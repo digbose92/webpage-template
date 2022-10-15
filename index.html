@@ -118,9 +118,9 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>MovieCLIP</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:title" content="MovieCLIP: Visual Scene Recognition in Movies." />
 	<meta property="og:description" content="Paper description." />
 
 	<!-- Get from Google Analytics -->
@@ -138,27 +138,103 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">MovieCLIP: Visual Scene Recognition in Movies</span>
+		<table align=center width=800px>
+			<table align=center width=800px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:20px"><a href="https://sail.usc.edu/~dbose/">Digbalay Bose<sup>1</sup></a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:20px"><a href="https://sail.usc.edu/~rajatheb/research/">Rajat Hebbar<sup>1</sup></a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:20px"><a href="https://sail.usc.edu/~somandep">Krishna Somandepalli<sup>2</sup></a></span>
 						</center>
 					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="">Haoyang Zhang<sup>1</sup></a></span>
+						</center>
+					</td>
+					<br>
 				</tr>
 			</table>
+
+			<table align=center width=800px>
+				<table align=center width=800px>
+					<tr>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="https://ycui.me/">Yin Cui<sup>2</sup></a></span>
+							</center>
+						</td>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="">Kree-Cole McLaughlin<sup>2</sup></a></span>
+							</center>
+						</td>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="">Huisheng Wang<sup>2</sup></a></span>
+							</center>
+						</td>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="https://sail.usc.edu/people/shri.html">Shrikanth Narayanan<sup>1</sup></a></span>
+							</center>
+						</td>
+						<br>
+					</tr>
+				</table>
+
+			
+			<br>
+
+			<table align=center width=800px>
+
+					<tr>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="https://sail.usc.edu/"><sup>1</sup>Signal Analysis and Interpretation Laboratory (SAIL), University of Southern California</a></span>
+							</center>
+						</td>
+					</tr>
+					<tr>
+						<td align=center width=100px>
+							<center>
+								<span style="font-size:20px"><a href="https://research.google/"><sup>2</sup>Google Research</a></span>
+							</center>
+						</td>
+					</tr>
+			</table>
+
+			
+			<br>
+
+
+
+			<table align=center width=800px>
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://wacv2023.thecvf.com/home">WACV 2023</a></span>
+						</center>
+					</td>
+			</table>
+
+
+
+
+
+			<br>
+
+
 			<table align=center width=250px>
 				<tr>
 					<td align=center width=120px>
@@ -171,25 +247,44 @@
 							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
 						</center>
 					</td>
+
 				</tr>
 			</table>
 		</table>
 	</center>
+
+
+	<br>
+
 
 	<center>
 		<table align=center width=850px>
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:800px" src="./resources/Introduction_figure.png"/>
 					</center>
+
 				</td>
 			</tr>
 		</table>
+	</center>
+
+
+	<center>
 		<table align=center width=850px>
 			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
+				<td width=260px>
+					<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					Overview diagram highlighting the challenges associated with visual scene recognition in movies <b>(a)</b> Domain mismatch between Natural scene images vs frames from Movies for living room
+					<b>(b)</b> Movie centric visual scene classes like prison, control room etc that are absent from existing taxonomies <b>(c)</b> Change in visual scene between shots in the same movie clip.
+
+				</td>
+			</tr>
+		</table>
+
 				</td>
 			</tr>
 		</table>
@@ -201,29 +296,20 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Longform media such as movies have complex narrative structures, with events spanning a rich variety of ambient visual scenes. Domain specific challenges associated
+				with visual scenes in movies include transitions, person coverage, and a wide array of real-life and fictional scenarios. Existing visual scene datasets in movies have limited
+				taxonomies and don't consider the visual scene transition within movie clips. In this work, we address the problem of visual scene recognition in movies by first automatically
+                curating a new and extensive movie-centric taxonomy of 179 scene labels derived from movie scripts and auxiliary web-based video datasets. Instead of manual annotations
+                which can be expensive, we use <b>CLIP</b> to weakly label 1.12 million shots from 32K movie clips based on our proposed taxonomy. We provide baseline visual models trained on
+                the weakly labeled dataset called <b>MovieCLIP</b> and evaluate them on an independent dataset verified by human raters. We show that leveraging features from models pretrained on
+                <b>MovieCLIP</b> benefits downstream tasks such as multi-label scene and genre classification of web videos and movie trailers.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-	<hr>
-
+	
 	<center><h1>Code</h1></center>
 
 	<table align=center width=420px>
